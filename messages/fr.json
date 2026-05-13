@@ -1,0 +1,199 @@
+{
+  "common": {
+    "brand": "Diaspora Démarches",
+    "ctaPrimary": "Réserver mon diagnostic gratuit",
+    "ctaSecondary": "Comment ça marche",
+    "calcomUrl": "https://cal.com/stephane-oabaev/diaspora-demarches",
+    "skipToContent": "Aller au contenu principal"
+  },
+  "nav": {
+    "home": "Accueil",
+    "howItWorks": "Comment ça marche",
+    "regularisation": "Régularisation",
+    "about": "À propos",
+    "contact": "Contact",
+    "diagnosticCta": "Diagnostic gratuit"
+  },
+  "hero": {
+    "title": "Votre dossier de régularisation, prêt à déposer en préfecture, en 14 jours",
+    "subtitle": "100% digital. 0 déplacement. Spécialisé pour la diaspora africaine en France.",
+    "primary": "Réserver mon diagnostic gratuit",
+    "secondary": "Comment ça marche"
+  },
+  "painPoints": {
+    "title": "Vous êtes dans cette situation ?",
+    "items": [
+      "Vous vivez en France depuis 5 ans ou plus sans papiers et vous voulez vous régulariser",
+      "Vous avez peur des préfectures, des avocats trop chers et des escrocs du quartier",
+      "Vous voulez un accompagnement sérieux, accessible, et 100% en ligne"
+    ]
+  },
+  "solution": {
+    "title": "Le Programme Régularisation Diaspora Démarches",
+    "price": "697 €",
+    "subtitle": "14 jours après réception de vos documents",
+    "benefitsTitle": "Ce que vous obtenez",
+    "benefits": [
+      "Un diagnostic vidéo personnel de votre situation",
+      "Un plan d'action écrit étape par étape",
+      "La liste personnalisée des pièces à rassembler",
+      "Les courriers, emails et formulaires CERFA rédigés sur mesure",
+      "La trame du récit pour la préfecture",
+      "Un tutoriel vidéo + audio + écrit pour chaque étape",
+      "3 révisions maximum du livrable final",
+      "Livraison 100% digitale par email"
+    ]
+  },
+  "process": {
+    "title": "Comment ça marche",
+    "subtitle": "Un parcours simple, transparent, en 5 étapes",
+    "steps": [
+      {
+        "title": "Vous réservez votre diagnostic gratuit",
+        "description": "Choisissez un créneau sur Cal.com en quelques clics."
+      },
+      {
+        "title": "Nous étudions votre éligibilité (30 min en visio)",
+        "description": "Diagnostic personnalisé pour identifier la meilleure voie de régularisation."
+      },
+      {
+        "title": "Si éligible, vous payez 697 € pour démarrer",
+        "description": "Paiement intégral par virement bancaire sécurisé."
+      },
+      {
+        "title": "Vous nous transmettez vos documents (30 jours max)",
+        "description": "Tutoriels vidéo et liste personnalisée fournis pour vous accompagner."
+      },
+      {
+        "title": "Nous livrons votre dossier complet en 14 jours",
+        "description": "Dossier complet prêt à déposer en préfecture, livré par email."
+      }
+    ]
+  },
+  "whatWeDo": {
+    "doTitle": "Ce que nous faisons",
+    "do": [
+      "Accompagnement administratif spécialisé",
+      "Constitution de dossier de régularisation",
+      "Rédaction de courriers et CERFA",
+      "Préparation à votre dépôt en préfecture"
+    ],
+    "dontTitle": "Ce que nous ne faisons pas",
+    "dont": [
+      "Conseil juridique (réservé aux avocats)",
+      "Représentation en préfecture ou tribunal",
+      "Garantie d'obtention du titre de séjour",
+      "Déplacement physique"
+    ]
+  },
+  "promise": {
+    "title": "Notre engagement",
+    "quote": "Je sélectionne mes clients. Je n'accepte que les dossiers que je juge solides. Si je dis oui à votre projet, c'est que j'y crois.",
+    "guaranteeTitle": "Garantie de Conformité",
+    "guarantee": "Si votre dossier est rejeté par la préfecture pour une pièce manquante ou une erreur de ma part, je vous accompagne gratuitement pour la nouvelle soumission."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "q": "Combien de temps faut-il être en France pour se faire régulariser ?",
+        "a": "En général, il faut justifier d'au moins 5 ans de présence continue en France (3 ans dans certains cas de régularisation par le travail). Mais chaque situation est différente — c'est ce qu'on évalue lors du diagnostic gratuit."
+      },
+      {
+        "q": "Est-ce que je suis garanti d'obtenir mon titre avec votre service ?",
+        "a": "Non, et personne ne peut le garantir, pas même un avocat. La décision finale appartient à la préfecture. Ce que je garantis, c'est un dossier complet, solide, déposé avec tous les arguments en votre faveur."
+      },
+      {
+        "q": "Pourquoi payer 697 € alors qu'une association est gratuite ?",
+        "a": "Les associations comme la Cimade sont excellentes mais saturées : il faut souvent 3 à 6 mois pour obtenir un RDV. Mon service est rapide (14 jours), 100% digital, et entièrement personnalisé. Si vous avez le temps d'attendre, allez vers les associations. Si vous voulez avancer maintenant, je suis là."
+      },
+      {
+        "q": "Acceptez-vous le paiement en plusieurs fois ?",
+        "a": "Non. Le paiement est intégral en une fois, par virement bancaire. C'est ce qui me permet de maintenir un tarif accessible (697 € contre 1500-2500 € chez un avocat) et de garantir un service de qualité."
+      },
+      {
+        "q": "Pourquoi ne faites-vous pas de conseil juridique ?",
+        "a": "Le conseil juridique est légalement réservé aux avocats. Je vous accompagne sur tout le volet administratif (documents, formulaires, dossier), ce qui couvre 90% des besoins. Pour le contentieux, je vous oriente vers un avocat partenaire si nécessaire."
+      },
+      {
+        "q": "Mes données personnelles sont-elles en sécurité ?",
+        "a": "Oui. Toutes vos données sont chiffrées, conservées uniquement le temps nécessaire à la mission (10 ans pour conformité légale), et jamais transmises à des tiers. Voir notre Politique de confidentialité."
+      }
+    ]
+  },
+  "ctaFinal": {
+    "title": "Prêt à transformer votre situation ?",
+    "subtitle": "Réservez votre diagnostic gratuit. Sans engagement. 100% confidentiel.",
+    "button": "Réserver mon diagnostic gratuit"
+  },
+  "footer": {
+    "tagline": "Régularisation administrative pour la diaspora africaine en France.",
+    "columns": {
+      "brand": "Diaspora Démarches",
+      "service": "Service",
+      "legal": "Légal",
+      "contact": "Contact"
+    },
+    "links": {
+      "home": "Accueil",
+      "howItWorks": "Comment ça marche",
+      "regularisation": "Régularisation",
+      "about": "À propos",
+      "diagnostic": "Diagnostic gratuit",
+      "pricing": "Tarifs",
+      "contactPage": "Contact",
+      "cgv": "CGV",
+      "mentions": "Mentions légales",
+      "privacy": "Confidentialité",
+      "cookies": "Cookies"
+    },
+    "email": "hello@diasporademarches.com",
+    "phone": "07 56 83 62 64",
+    "legalMention": "Diaspora Démarches est édité par AARON ENTERPRISES, SASU au capital de 150 €, SIREN 882 844 327, siège social 11 rue Auguste Comte, 92170 Vanves. TVA non applicable, art. 293 B du CGI. Service d'accompagnement administratif — ne fournit aucun conseil juridique au sens de la loi du 31 décembre 1971.",
+    "copyright": "© 2026 Diaspora Démarches — Tous droits réservés"
+  },
+  "pages": {
+    "regularisation": {
+      "title": "Programme Régularisation",
+      "subtitle": "Un dossier complet, livré en 14 jours, pour déposer en préfecture en toute sérénité."
+    },
+    "howItWorks": {
+      "title": "Comment ça marche",
+      "subtitle": "Le parcours Diaspora Démarches en 5 étapes simples."
+    },
+    "about": {
+      "title": "À propos",
+      "intro": "Diaspora Démarches a été fondé pour offrir à la diaspora africaine en France un accompagnement administratif digne, accessible et 100% en ligne.",
+      "body": "Nous croyons que personne ne devrait avoir à choisir entre payer 2 500 € chez un avocat ou attendre six mois pour un rendez-vous associatif. Notre mission : sécuriser votre dossier, accélérer votre démarche, et vous redonner le contrôle de votre vie administrative."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Réservez un diagnostic gratuit en visio, ou écrivez-nous directement.",
+      "emailLabel": "Email",
+      "phoneLabel": "Téléphone",
+      "bookTitle": "Réserver un créneau"
+    },
+    "cgv": {
+      "title": "Conditions Générales de Vente",
+      "updated": "Dernière mise à jour : janvier 2026"
+    },
+    "mentions": {
+      "title": "Mentions légales",
+      "updated": "Dernière mise à jour : janvier 2026"
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "updated": "Dernière mise à jour : janvier 2026"
+    },
+    "cookies": {
+      "title": "Politique cookies",
+      "updated": "Dernière mise à jour : janvier 2026"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Diaspora Démarches — Régularisation en 14 jours, 100% digital",
+      "description": "Votre dossier de régularisation préparé en 14 jours par un expert. Diagnostic gratuit, 0 déplacement, garantie de conformité. Spécialiste de la diaspora africaine en France."
+    }
+  }
+}
