@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Mail, Phone } from "lucide-react";
+import { ArrowRight, Mail, Phone } from "lucide-react";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
-import { CalcomEmbed } from "@/components/CalcomEmbed";
+import { Link } from "@/i18n/routing";
 
 export async function generateMetadata({
   params,
@@ -36,7 +36,7 @@ export default async function ContactPage({
       <main id="main">
         <PageHeader eyebrow="Contact" title={t("title")} subtitle={t("subtitle")} />
         <section className="section pt-0">
-          <div className="container-tight grid gap-8 lg:grid-cols-[1fr_1.4fr]">
+          <div className="container-tight grid gap-8 lg:grid-cols-2">
             <div className="card h-fit">
               <h2 className="font-display text-lg font-semibold text-primary">
                 {t("emailLabel")}
@@ -57,11 +57,19 @@ export default async function ContactPage({
                 <Phone size={18} aria-hidden /> {tFooter("phone")}
               </a>
             </div>
-            <div>
-              <h2 className="mb-4 font-display text-lg font-semibold text-primary">
-                {t("bookTitle")}
+            <div className="card flex flex-col">
+              <h2 className="font-display text-lg font-semibold text-primary">
+                Avant un échange, faites le test d&apos;éligibilité
               </h2>
-              <CalcomEmbed />
+              <p className="mt-3 text-text-secondary">
+                Pour gagner du temps lors de notre échange, commencez par notre
+                test d&apos;éligibilité gratuit. En 7 minutes, vous obtenez un
+                score sur 100 et une recommandation adaptée à votre situation.
+              </p>
+              <Link href="/quiz" className="btn-primary mt-6 self-start">
+                Faire le test d&apos;éligibilité gratuit
+                <ArrowRight size={16} aria-hidden />
+              </Link>
             </div>
           </div>
         </section>

@@ -17,7 +17,6 @@ const navItems = [
 
 export function Navbar() {
   const t = useTranslations("nav");
-  const tCommon = useTranslations("common");
   const [open, setOpen] = useState(false);
 
   return (
@@ -53,14 +52,12 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href={tCommon("calcomUrl")}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/quiz"
             className="hidden md:inline-flex btn-primary !py-2.5 !text-sm !min-h-[44px]"
           >
-            {t("diagnosticCta")}
-          </a>
+            Faire le test gratuit
+          </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -92,14 +89,13 @@ export function Navbar() {
               {t(item.key)}
             </Link>
           ))}
-          <a
-            href={tCommon("calcomUrl")}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/quiz"
+            onClick={() => setOpen(false)}
             className="btn-primary mt-2"
           >
-            {t("diagnosticCta")}
-          </a>
+            Faire le test gratuit
+          </Link>
         </nav>
       </div>
     </header>

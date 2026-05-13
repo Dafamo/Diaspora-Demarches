@@ -8,7 +8,6 @@ import { Link } from "@/i18n/routing";
 
 export function Hero() {
   const t = useTranslations("hero");
-  const tCommon = useTranslations("common");
 
   return (
     <section className="relative overflow-hidden">
@@ -36,22 +35,15 @@ export function Hero() {
           <p className="mx-auto mt-6 max-w-2xl text-base text-text-secondary md:text-lg lg:mx-0">
             {t("subtitle")}
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
-            <a
-              href={tCommon("calcomUrl")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary w-full sm:w-auto"
-            >
-              {t("primary")} <ArrowRight size={18} aria-hidden />
-            </a>
-            <Link href="/quiz" className="btn-secondary w-full sm:w-auto">
-              Faire le test gratuit
+          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:items-start lg:justify-start">
+            <Link href="/quiz" className="btn-primary w-full sm:w-auto">
+              Faire le test d&apos;éligibilité gratuit
+              <ArrowRight size={18} aria-hidden />
             </Link>
           </div>
           <p className="mt-6 inline-flex items-center gap-2 text-sm text-text-secondary">
             <ShieldCheck size={16} className="text-success" aria-hidden />
-            Diagnostic gratuit · Sans engagement · 100% confidentiel
+            Gratuit · 7 minutes · Sans engagement · 100% confidentiel
           </p>
         </motion.div>
 

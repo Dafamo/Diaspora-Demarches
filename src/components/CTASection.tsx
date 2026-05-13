@@ -1,10 +1,7 @@
 import { ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export function CTASection() {
-  const t = useTranslations("ctaFinal");
-  const tCommon = useTranslations("common");
-
   return (
     <section className="section">
       <div className="container-tight">
@@ -19,19 +16,16 @@ export function CTASection() {
           />
           <div className="relative">
             <h2 className="font-display text-3xl font-bold md:text-4xl">
-              {t("title")}
+              Prêt à transformer votre situation&nbsp;?
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-white/85 md:text-lg">
-              {t("subtitle")}
+              Découvrez en 7 minutes si votre dossier est éligible.
+              Sans engagement. 100% confidentiel.
             </p>
-            <a
-              href={tCommon("calcomUrl")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary mt-7"
-            >
-              {t("button")} <ArrowRight size={18} aria-hidden />
-            </a>
+            <Link href="/quiz" className="btn-primary mt-7">
+              Faire le test d&apos;éligibilité gratuit
+              <ArrowRight size={18} aria-hidden />
+            </Link>
           </div>
         </div>
       </div>

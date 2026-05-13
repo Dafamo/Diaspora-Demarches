@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Check, Clock } from "lucide-react";
+import { ArrowRight, Check, Clock } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export function Solution() {
   const t = useTranslations("solution");
-  const tCommon = useTranslations("common");
   const benefits = t.raw("benefits") as string[];
 
   return (
@@ -83,14 +83,10 @@ export function Solution() {
               <p className="text-sm text-text-secondary">
                 Paiement unique · Livraison digitale · 3 révisions incluses
               </p>
-              <a
-                href={tCommon("calcomUrl")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                {tCommon("ctaPrimary")}
-              </a>
+              <Link href="/quiz" className="btn-primary">
+                Faire le test d&apos;éligibilité gratuit
+                <ArrowRight size={16} aria-hidden />
+              </Link>
             </div>
           </div>
         </motion.div>

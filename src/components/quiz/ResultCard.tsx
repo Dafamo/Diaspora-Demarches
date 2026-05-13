@@ -7,10 +7,7 @@ import {
   AlertTriangle,
   PauseCircle,
   XCircle,
-  MessageCircle,
   Calendar,
-  Mail,
-  ExternalLink,
 } from "lucide-react";
 import { cn } from "@/lib/cn";
 import type { ScoreResult } from "@/lib/quiz-scoring";
@@ -18,11 +15,6 @@ import { categoryColor, categoryLabel } from "@/lib/quiz-scoring";
 import { ScoreGauge } from "./ScoreGauge";
 
 const CALCOM_URL = "https://cal.com/stephane-oabaev/diaspora-demarches";
-
-function whatsappLink(score: number) {
-  const msg = `Bonjour, je viens de passer le quiz et j'ai obtenu un score de ${score}/100`;
-  return `https://wa.me/33756836264?text=${encodeURIComponent(msg)}`;
-}
 
 type Props = {
   result: ScoreResult;
@@ -126,7 +118,16 @@ export function ResultCard({ result, firstname }: Props) {
         ) : null}
 
         <div className="mt-8 border-t border-border pt-6">
-          <CTAs category={category} score={score} />
+          <a
+            href={CALCOM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary w-full justify-center sm:w-auto"
+          >
+            <Calendar size={18} aria-hidden />
+            Mon calendrier
+            <ArrowRight size={16} aria-hidden />
+          </a>
         </div>
 
         <p className="mt-6 text-xs text-text-secondary">
@@ -135,98 +136,5 @@ export function ResultCard({ result, firstname }: Props) {
         </p>
       </div>
     </motion.section>
-  );
-}
-
-function CTAs({ category, score }: { category: ScoreResult["category"]; score: number }) {
-  if (category === "solide" || category === "possible") {
-    return (
-      <div className="flex flex-col gap-3 sm:flex-row">
-        <a
-          href={CALCOM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-primary"
-        >
-          <Calendar size={18} aria-hidden />
-          Réserver mon rendez-vous
-          <ArrowRight size={16} aria-hidden />
-        </a>
-        <a
-          href={whatsappLink(score)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-secondary"
-        >
-          <MessageCircle size={18} aria-hidden />
-          Me contacter par WhatsApp
-        </a>
-      </div>
-    );
-  }
-
-  if (category === "faible") {
-    return (
-      <div className="grid gap-3 sm:grid-cols-3">
-        <a
-          href="https://www.lacimade.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-secondary !text-sm"
-        >
-          Voir les associations
-          <ExternalLink size={14} aria-hidden />
-        </a>
-        <a
-          href={`mailto:hello@diasporademarches.com?subject=Newsletter%20conseils%20mensuels`}
-          className="btn-secondary !text-sm"
-        >
-          <Mail size={16} aria-hidden /> Conseils mensuels
-        </a>
-        <a
-          href={whatsappLink(score)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-secondary !text-sm"
-        >
-          <MessageCircle size={16} aria-hidden /> Revenir dans 6-12 mois
-        </a>
-      </div>
-    );
-  }
-
-  return (
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-      <a
-        href="https://www.lacimade.org/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-secondary !text-sm"
-      >
-        Cimade <ExternalLink size={14} aria-hidden />
-      </a>
-      <a
-        href="https://www.gisti.org/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-secondary !text-sm"
-      >
-        GISTI <ExternalLink size={14} aria-hidden />
-      </a>
-      <a
-        href="https://adde.fr/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-secondary !text-sm"
-      >
-        ADDE — avocats <ExternalLink size={14} aria-hidden />
-      </a>
-      <a
-        href={`mailto:hello@diasporademarches.com?subject=Newsletter%20gratuite`}
-        className="btn-secondary !text-sm"
-      >
-        <Mail size={14} aria-hidden /> Newsletter
-      </a>
-    </div>
   );
 }
