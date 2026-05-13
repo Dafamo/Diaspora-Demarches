@@ -75,6 +75,17 @@ export async function POST(req: Request) {
   const FROM = process.env.QUIZ_FROM_EMAIL || "Diaspora Démarches <hello@diasporademarches.com>";
   const ADMIN = process.env.QUIZ_ADMIN_EMAIL || "hello@diasporademarches.com";
 
+  const showCalendar = result.category === "solide" || result.category === "possible";
+
+  const decisionLine =
+    result.category === "solide"
+      ? "Ma décision : j'accepte de vous accompagner. Votre dossier est solide et présente toutes les conditions favorables."
+      : result.category === "possible"
+        ? "Ma décision : j'accepte de vous accompagner, à condition que vous acceptiez les risques identifiés en toute connaissance de cause."
+        : result.category === "faible"
+          ? "Ma décision : je ne peux pas vous accompagner aujourd'hui. Renforcez votre dossier dans les prochains mois et refaites le test dans 6 à 12 mois."
+          : "Ma décision : je ne peux pas vous accompagner sur ce dossier. Les conditions ne sont pas réunies pour une démarche classique.";
+
   const prospectHtml = `
     <div style="font-family:Inter,Arial,sans-serif;max-width:600px;margin:auto;color:#1A1A1A">
       <h1 style="color:#1F3864">Votre score d'éligibilité : ${result.score}/100</h1>
@@ -82,10 +93,11 @@ export async function POST(req: Request) {
       <p>Merci d'avoir pris le temps de passer notre quiz d'éligibilité.</p>
       <p><strong>Score :</strong> ${result.score}/100<br/>
       <strong>Catégorie :</strong> ${escapeHtml(result.category)}</p>
+      <p>${escapeHtml(decisionLine)}</p>
       ${
-        result.score >= 60
-          ? `<p><a href="https://cal.com/stephane-oabaev/diaspora-demarches" style="display:inline-block;padding:12px 20px;background:#C8753A;color:#fff;border-radius:12px;text-decoration:none">Réserver mon rendez-vous gratuit</a></p>`
-          : `<p>Ressources adaptées : <a href="https://www.lacimade.org/">Cimade</a>, <a href="https://www.gisti.org/">GISTI</a>, <a href="https://adde.fr/">ADDE (avocats)</a>.</p>`
+        showCalendar
+          ? `<p><a href="https://cal.com/stephane-oabaev/diaspora-demarches" style="display:inline-block;padding:12px 20px;background:#C8753A;color:#fff;border-radius:12px;text-decoration:none">Réserver via mon calendrier</a></p>`
+          : `<p>Structures gratuites recommandées : <a href="https://www.lacimade.org/">Cimade</a> · <a href="https://www.gisti.org/">GISTI</a> · <a href="https://adde.fr/">ADDE (avocats)</a>.</p>`
       }
       <p>À très bientôt,<br/>Stéphane WATAT — Fondateur, Diaspora Démarches<br/>
       hello@diasporademarches.com — 07 56 83 62 64</p>
