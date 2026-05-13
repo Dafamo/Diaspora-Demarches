@@ -55,6 +55,10 @@
   .eyebrow {
     @apply mb-3 inline-block text-sm font-semibold uppercase tracking-wider text-accent;
   }
+
+  .input {
+    @apply w-full rounded-xl border-2 border-border bg-white px-4 py-3 text-text-primary outline-none transition-colors focus:border-accent;
+  }
 }
 
 .prose-legal h2 {

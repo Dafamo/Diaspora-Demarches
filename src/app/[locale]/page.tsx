@@ -10,6 +10,7 @@ import { Promise as PromiseSection } from "@/components/Promise";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { CTASection } from "@/components/CTASection";
+import { QuizTeaser } from "@/components/QuizTeaser";
 
 export default async function HomePage({
   params,
@@ -25,6 +26,7 @@ export default async function HomePage({
       <main id="main">
         <Hero />
         <PainPoints />
+        <QuizTeaser />
         <Solution />
         <ProcessSteps />
         <WhatWeDo />

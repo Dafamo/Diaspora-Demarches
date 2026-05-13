@@ -5,6 +5,7 @@ const paths = [
   "",
   "/regularisation",
   "/comment-ca-marche",
+  "/quiz",
   "/a-propos",
   "/contact",
   "/cgv",

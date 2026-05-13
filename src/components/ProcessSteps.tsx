@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import {
   CalendarCheck,
   ClipboardList,
@@ -18,21 +21,31 @@ export function ProcessSteps() {
   return (
     <section id="comment-ca-marche" className="section">
       <div className="container-tight">
-        <div className="mx-auto max-w-2xl text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-2xl text-center"
+        >
           <span className="eyebrow">Le parcours</span>
           <h2 className="font-display text-3xl font-bold text-primary md:text-4xl">
             {t("title")}
           </h2>
           <p className="mt-3 text-text-secondary">{t("subtitle")}</p>
-        </div>
+        </motion.div>
 
         <ol className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
           {steps.map((step, i) => {
             const Icon = icons[i] ?? CalendarCheck;
             return (
-              <li
+              <motion.li
                 key={i}
-                className="card relative flex h-full flex-col"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.45, delay: i * 0.07 }}
+                className="card relative flex h-full flex-col transition-transform hover:-translate-y-1"
               >
                 <div className="flex items-center gap-3">
                   <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary text-white font-display font-semibold">
@@ -46,7 +59,7 @@ export function ProcessSteps() {
                 <p className="mt-2 text-sm text-text-secondary">
                   {step.description}
                 </p>
-              </li>
+              </motion.li>
             );
           })}
         </ol>

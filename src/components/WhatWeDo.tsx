@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -9,7 +12,13 @@ export function WhatWeDo() {
   return (
     <section className="section bg-white">
       <div className="container-tight grid gap-6 md:grid-cols-2">
-        <div className="card border-success/30">
+        <motion.div
+          initial={{ opacity: 0, x: -24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.55 }}
+          className="card border-success/30"
+        >
           <h3 className="flex items-center gap-2 font-display text-xl font-semibold text-primary">
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-success/15 text-success">
               <Check size={18} strokeWidth={3} aria-hidden />
@@ -29,9 +38,15 @@ export function WhatWeDo() {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
-        <div className="card border-accent/30">
+        <motion.div
+          initial={{ opacity: 0, x: 24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.55 }}
+          className="card border-accent/30"
+        >
           <h3 className="flex items-center gap-2 font-display text-xl font-semibold text-primary">
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-accent/15 text-accent">
               <X size={18} strokeWidth={3} aria-hidden />
@@ -51,7 +66,7 @@ export function WhatWeDo() {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
