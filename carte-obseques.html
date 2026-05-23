@@ -91,18 +91,19 @@
     border: 0.3pt solid var(--gold-deep);
   }
 
-  /* Corner ornaments (compact, restricted to bottom corners to avoid title overlap) */
+  /* Corner ornaments */
   .corner {
     position: absolute;
-    width: 24mm;
-    height: 24mm;
+    width: 38mm;
+    height: 38mm;
     z-index: 2;
     pointer-events: none;
-    opacity: 0.9;
   }
   .corner svg { width: 100%; height: 100%; display: block; }
-  .corner.bl { bottom: 6mm; left: 6mm;    transform: scaleY(-1); }
-  .corner.br { bottom: 6mm; right: 6mm;   transform: scale(-1, -1); }
+  .corner.tl { top: 4mm;    left: 4mm;    }
+  .corner.tr { top: 4mm;    right: 4mm;   transform: scaleX(-1); }
+  .corner.bl { bottom: 4mm; left: 4mm;    transform: scaleY(-1); }
+  .corner.br { bottom: 4mm; right: 4mm;   transform: scale(-1, -1); }
 
   /* Decorative divider */
   .divider {
@@ -460,6 +461,8 @@
   <!-- ========== FACETTE 4 — PROGRAMME (face arrière, à gauche au recto) ========== -->
   <section class="facette programme">
     <div class="glow"></div>
+    <div class="corner tl"><svg><use href="#corner-ornament"/></svg></div>
+    <div class="corner tr"><svg><use href="#corner-ornament"/></svg></div>
     <div class="corner bl"><svg><use href="#corner-ornament"/></svg></div>
     <div class="corner br"><svg><use href="#corner-ornament"/></svg></div>
 
@@ -516,15 +519,13 @@
   <!-- ========== FACETTE 1 — COUVERTURE (face avant, à droite au recto) ========== -->
   <section class="facette couverture">
     <div class="glow"></div>
+    <div class="corner tl"><svg><use href="#corner-ornament"/></svg></div>
+    <div class="corner tr"><svg><use href="#corner-ornament"/></svg></div>
     <div class="corner bl"><svg><use href="#corner-ornament"/></svg></div>
     <div class="corner br"><svg><use href="#corner-ornament"/></svg></div>
 
     <div>
       <h1 class="cursive titre">In Memoriam</h1>
-      <p class="nom">
-        Monsieur Tchoulé Jean Marie
-        <span class="dit">dit « John Marie »</span>
-      </p>
     </div>
 
     <div class="photo-frame">
@@ -555,6 +556,8 @@
   <!-- ========== FACETTE 2 — FAIRE-PART (intérieur gauche) ========== -->
   <section class="facette faire-part">
     <div class="glow"></div>
+    <div class="corner tl"><svg><use href="#corner-ornament"/></svg></div>
+    <div class="corner tr"><svg><use href="#corner-ornament"/></svg></div>
     <div class="corner bl"><svg><use href="#corner-ornament"/></svg></div>
     <div class="corner br"><svg><use href="#corner-ornament"/></svg></div>
 
@@ -588,6 +591,8 @@
   <!-- ========== FACETTE 3 — BIOGRAPHIE (intérieur droite) ========== -->
   <section class="facette biographie">
     <div class="glow"></div>
+    <div class="corner tl"><svg><use href="#corner-ornament"/></svg></div>
+    <div class="corner tr"><svg><use href="#corner-ornament"/></svg></div>
     <div class="corner bl"><svg><use href="#corner-ornament"/></svg></div>
     <div class="corner br"><svg><use href="#corner-ornament"/></svg></div>
 
