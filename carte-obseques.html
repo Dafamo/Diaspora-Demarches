@@ -150,24 +150,30 @@
 
   /* ===== FACETTE 1 — COUVERTURE ===== */
   .facette.couverture { justify-content: space-between; padding-top: 16mm; padding-bottom: 16mm; }
-  .couverture .titre { font-size: 56pt; margin-bottom: 2mm; }
+  /* Entête : titre + nom — largeur contrainte pour ne pas chevaucher les ornements de coin (38 mm de chaque côté) */
+  .couverture .entete {
+    max-width: 68mm;
+    margin: 0 auto;
+  }
+  .couverture .titre { font-size: 52pt; margin-bottom: 2mm; line-height: 1; }
   .couverture .nom {
     font-family: 'Cormorant Garamond', serif;
     color: var(--cream);
-    font-size: 14pt;
+    font-size: 10.5pt;
     font-weight: 500;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-top: 1mm;
+    line-height: 1.25;
   }
   .couverture .nom .dit {
     display: block;
     font-style: italic;
-    font-size: 12pt;
+    font-size: 9.5pt;
     letter-spacing: 0.04em;
     text-transform: none;
     color: var(--cream-soft);
-    margin-top: 1mm;
+    margin-top: 0.8mm;
   }
 
   /* Oval photo frame */
@@ -524,8 +530,12 @@
     <div class="corner bl"><svg><use href="#corner-ornament"/></svg></div>
     <div class="corner br"><svg><use href="#corner-ornament"/></svg></div>
 
-    <div>
+    <div class="entete">
       <h1 class="cursive titre">In Memoriam</h1>
+      <p class="nom">
+        Monsieur Tchoulé Jean Marie
+        <span class="dit">dit « John Marie »</span>
+      </p>
     </div>
 
     <div class="photo-frame">
