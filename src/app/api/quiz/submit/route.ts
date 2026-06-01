@@ -96,7 +96,7 @@ export async function POST(req: Request) {
       <p>${escapeHtml(decisionLine)}</p>
       ${
         showCalendar
-          ? `<p><a href="https://cal.com/stephane-oabaev/diaspora-demarches" style="display:inline-block;padding:12px 20px;background:#C8753A;color:#fff;border-radius:12px;text-decoration:none">Réserver via mon calendrier</a></p>`
+          ? `<p><a href="https://cal.eu/diaspora-demarches" style="display:inline-block;padding:12px 20px;background:#C8753A;color:#fff;border-radius:12px;text-decoration:none">Réserver mon rendez-vous gratuit</a></p>`
           : `<p>Structures gratuites recommandées : <a href="https://www.lacimade.org/">Cimade</a> · <a href="https://www.gisti.org/">GISTI</a> · <a href="https://adde.fr/">ADDE (avocats)</a>.</p>`
       }
       <p>À très bientôt,<br/>Stéphane WATAT — Fondateur, Diaspora Démarches<br/>
@@ -128,6 +128,7 @@ export async function POST(req: Request) {
     to: contact.email,
     subject: `Votre score d'éligibilité Diaspora Démarches : ${result.score}/100`,
     html: prospectHtml,
+    replyTo: ADMIN,
   });
 
   const adminSent = await sendResend({

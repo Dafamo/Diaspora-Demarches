@@ -15,7 +15,7 @@ import type { ScoreResult } from "@/lib/quiz-scoring";
 import { categoryColor, categoryLabel } from "@/lib/quiz-scoring";
 import { ScoreGauge } from "./ScoreGauge";
 
-const CALCOM_URL = "https://cal.com/stephane-oabaev/diaspora-demarches";
+const CALCOM_URL = "https://cal.eu/diaspora-demarches";
 
 type Props = {
   result: ScoreResult;
@@ -169,7 +169,7 @@ function DecisionPanel({ category }: { category: ScoreResult["category"] }) {
           className="btn-primary mt-6"
         >
           <Calendar size={18} aria-hidden />
-          Mon calendrier
+          Réserver mon rendez-vous gratuit
           <ArrowRight size={16} aria-hidden />
         </a>
       </div>
@@ -214,7 +214,7 @@ function DecisionPanel({ category }: { category: ScoreResult["category"] }) {
           className="btn-primary mt-6"
         >
           <Calendar size={18} aria-hidden />
-          Mon calendrier
+          Réserver mon rendez-vous gratuit
           <ArrowRight size={16} aria-hidden />
         </a>
       </div>
