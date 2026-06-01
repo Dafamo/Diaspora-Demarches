@@ -21,10 +21,12 @@ export const SERVICES: Service[] = [
       "Constitution d'un recours écrit et argumenté contre un refus préfectoral.",
     audience: "Pour vous si vous venez de recevoir un refus de la préfecture.",
     bullets: [
+      "Échange en visio de 20 min pour comprendre votre refus",
       "Analyse du refus et de ses motifs",
       "Rédaction du recours gracieux ou hiérarchique",
       "Pièces justificatives organisées",
       "Trame d'argumentation personnalisée",
+      "Recours livré par email, prêt à envoyer",
     ],
   },
   {
@@ -38,10 +40,12 @@ export const SERVICES: Service[] = [
     audience:
       "Pour vous si vous êtes déjà titulaire d'un titre arrivant à échéance.",
     bullets: [
+      "Appel vidéo de 20 min pour cadrer votre dossier",
       "Liste personnalisée des pièces à fournir",
       "CERFA renseignés et vérifiés",
       "Lettre d'accompagnement rédigée",
       "Préparation à la prise de rendez-vous en ligne",
+      "Dossier livré par email, prêt à déposer",
     ],
   },
   {
@@ -55,13 +59,13 @@ export const SERVICES: Service[] = [
     audience:
       "Pour vous si vous vivez en France depuis 5 ans ou plus sans titre de séjour.",
     bullets: [
-      "Diagnostic vidéo personnel de votre situation",
+      "Appel vidéo de 20 min pour cadrer votre situation",
       "Plan d'action écrit étape par étape",
       "Liste personnalisée des pièces à rassembler",
       "Courriers, emails et CERFA rédigés sur mesure",
       "Trame du récit pour la préfecture",
-      "Tutoriel vidéo + audio + écrit pour chaque étape",
       "3 révisions incluses · Garantie de Conformité",
+      "Livraison 100% digitale par email",
     ],
     featured: true,
   },
@@ -76,11 +80,13 @@ export const SERVICES: Service[] = [
     audience:
       "Pour vous si vous souhaitez faire venir votre conjoint(e) ou vos enfants en France.",
     bullets: [
+      "Échange en visio de 20 min pour valider votre projet",
       "Constitution du dossier OFII",
       "Justificatifs de ressources et de logement",
       "CERFA et formulaires renseignés",
       "Trame de la lettre de motivation",
       "Préparation à la visite OFII",
+      "Dossier complet livré par email",
     ],
   },
   {
@@ -94,11 +100,13 @@ export const SERVICES: Service[] = [
     audience:
       "Pour vous si vous résidez régulièrement en France depuis 5 ans et souhaitez la nationalité.",
     bullets: [
+      "Appel vidéo de 20 min pour cadrer votre démarche",
       "Vérification des conditions d'éligibilité",
       "Liste des pièces et CERFA complets",
       "Rédaction du parcours d'assimilation",
       "Préparation à l'entretien d'assimilation",
       "Trame du récit de vie personnalisée",
+      "Dossier complet livré par email",
     ],
   },
 ];
