@@ -66,18 +66,6 @@ export function ServicesHero() {
               className="object-cover"
             />
           </div>
-          <div className="absolute -bottom-4 -left-4 hidden rounded-2xl border border-border bg-white p-4 shadow-soft sm:block">
-            <p className="text-xs uppercase tracking-wider text-text-secondary">
-              À partir de
-            </p>
-            <p className="font-display text-2xl font-bold text-primary">350 €</p>
-          </div>
-          <div className="absolute -top-4 -right-4 hidden rounded-2xl border border-border bg-white p-4 shadow-soft sm:block">
-            <p className="text-xs uppercase tracking-wider text-text-secondary">
-              Délai
-            </p>
-            <p className="font-display text-2xl font-bold text-accent">7-21 j</p>
-          </div>
         </motion.div>
       </div>
     </section>
