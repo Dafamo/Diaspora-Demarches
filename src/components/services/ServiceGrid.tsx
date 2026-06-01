@@ -9,7 +9,7 @@ import { SERVICES } from "@/lib/services-data";
 export function ServiceGrid() {
   return (
     <section className="section">
-      <div className="container-tight">
+      <div className="mx-auto w-full max-w-[1400px] px-5 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ export function ServiceGrid() {
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {SERVICES.map((s, i) => (
             <motion.article
               key={s.slug}
@@ -36,24 +36,24 @@ export function ServiceGrid() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.45, delay: i * 0.06 }}
               className={cn(
-                "relative flex h-full flex-col rounded-2xl border bg-white p-6 shadow-soft transition-transform hover:-translate-y-1 md:p-8",
+                "relative flex h-full flex-col rounded-2xl border bg-white p-5 shadow-soft transition-transform hover:-translate-y-1",
                 s.featured
-                  ? "border-accent/40 ring-2 ring-accent/20 lg:scale-[1.02]"
+                  ? "border-accent/40 ring-2 ring-accent/20"
                   : "border-border"
               )}
             >
               {s.featured ? (
-                <span className="absolute -top-3 left-6 inline-flex items-center gap-1 rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-soft">
-                  <Star size={12} fill="currentColor" aria-hidden />
+                <span className="absolute -top-3 left-4 inline-flex items-center gap-1 rounded-full bg-accent px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-white shadow-soft">
+                  <Star size={10} fill="currentColor" aria-hidden />
                   Produit phare
                 </span>
               ) : null}
 
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-accent">
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-accent">
                   {s.tagline}
                 </p>
-                <h3 className="mt-1 font-display text-xl font-semibold text-primary md:text-2xl">
+                <h3 className="mt-1 font-display text-lg font-semibold leading-snug text-primary">
                   {s.title}
                 </h3>
                 <p className="mt-2 text-sm text-text-secondary">
@@ -61,24 +61,24 @@ export function ServiceGrid() {
                 </p>
               </div>
 
-              <div className="mt-5 flex items-baseline justify-between gap-3 border-y border-border py-4">
-                <span className="font-display text-3xl font-bold text-primary">
+              <div className="mt-4 flex items-baseline justify-between gap-2 border-y border-border py-3">
+                <span className="font-display text-2xl font-bold text-primary">
                   {s.price}
                 </span>
-                <span className="inline-flex items-center gap-1 text-sm text-text-secondary">
-                  <Clock size={14} aria-hidden /> {s.delay}
+                <span className="inline-flex items-center gap-1 text-xs text-text-secondary">
+                  <Clock size={12} aria-hidden /> {s.delay}
                 </span>
               </div>
 
-              <p className="mt-4 text-xs italic text-text-secondary">
+              <p className="mt-3 text-xs italic text-text-secondary">
                 {s.audience}
               </p>
 
-              <ul className="mt-4 space-y-2 text-sm text-text-primary">
+              <ul className="mt-3 space-y-2 text-xs text-text-primary">
                 {s.bullets.map((b, j) => (
                   <li key={j} className="flex items-start gap-2">
                     <Check
-                      size={15}
+                      size={13}
                       strokeWidth={3}
                       className="mt-0.5 shrink-0 text-success"
                       aria-hidden
@@ -88,18 +88,18 @@ export function ServiceGrid() {
                 ))}
               </ul>
 
-              <div className="mt-6 flex-1" />
+              <div className="mt-5 flex-1" />
               <Link
                 href="/quiz"
                 className={cn(
-                  "mt-2 inline-flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 font-semibold transition-all duration-200 hover:-translate-y-0.5",
+                  "mt-2 inline-flex w-full items-center justify-center gap-1.5 rounded-xl px-3 py-2.5 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5",
                   s.featured
                     ? "bg-accent text-white shadow-lg shadow-accent/20 hover:bg-accent-hover hover:shadow-xl"
                     : "border-2 border-primary text-primary hover:bg-primary hover:text-white"
                 )}
               >
                 Vérifier mon éligibilité
-                <ArrowRight size={16} aria-hidden />
+                <ArrowRight size={14} aria-hidden />
               </Link>
             </motion.article>
           ))}
