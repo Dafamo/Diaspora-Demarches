@@ -35,13 +35,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/comment-ca-marche" className="hover:text-primary">
-                  {t("links.howItWorks")}
+                <Link href="/services" className="hover:text-primary">
+                  {t("links.services")}
                 </Link>
               </li>
               <li>
-                <Link href="/regularisation" className="hover:text-primary">
-                  {t("links.regularisation")}
+                <Link href="/comment-ca-marche" className="hover:text-primary">
+                  {t("links.howItWorks")}
                 </Link>
               </li>
               <li>

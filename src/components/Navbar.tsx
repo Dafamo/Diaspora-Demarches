@@ -8,7 +8,7 @@ import { cn } from "@/lib/cn";
 
 const navItems = [
   { href: "/", key: "home" },
-  { href: "/regularisation", key: "regularisation" },
+  { href: "/services", key: "services" },
   { href: "/comment-ca-marche", key: "howItWorks" },
   { href: "/quiz", key: "quiz" },
   { href: "/a-propos", key: "about" },

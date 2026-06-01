@@ -8,6 +8,7 @@
   },
   "nav": {
     "home": "Accueil",
+    "services": "Nos services",
     "howItWorks": "Comment ça marche",
     "regularisation": "Régularisation",
     "quiz": "Test d'éligibilité",
@@ -137,6 +138,7 @@
     },
     "links": {
       "home": "Accueil",
+      "services": "Nos services",
       "howItWorks": "Comment ça marche",
       "regularisation": "Régularisation",
       "about": "À propos",

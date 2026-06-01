@@ -3,6 +3,7 @@ import { routing } from "@/i18n/routing";
 
 const paths = [
   "",
+  "/services",
   "/regularisation",
   "/comment-ca-marche",
   "/quiz",
